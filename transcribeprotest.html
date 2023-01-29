@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Music Transcription</title>
+  </head>
+  <body>
+    <h1>Upload your mp3 file for transcription</h1>
+    <form id="form" enctype="multipart/form-data">
+      <input type="file" name="file" id="file" accept="audio/mp3" required>
+      <br>
+      <button type="submit">Transcribe</button>
+    </form>
+    <br>
+    <div id="transcription"></div>
+
+    <script>
+      const form = document.getElementById("form");
+      const fileInput = document.getElementById("file");
+      const transcriptionDiv = document.getElementById("transcription");
+
+      form.onsubmit = async (e) => {
+        e.preventDefault();
+        const file = fileInput.files[0];
+        // Use a music transcription library or API to transcribe the music
+        // Example: 
+        // const transcription = await transcribeMusic(file);
+        // transcriptionDiv.innerHTML = transcription;
+        transcriptionDiv.innerHTML = "Please provide a music transcription library or API";
+      };
+    </script>
+  </body>
+</html>
